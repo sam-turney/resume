@@ -1,0 +1,215 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%-----------HEADING-----------
+\begin{center}
+    \textbf{\Huge \scshape Samuel Turney} \\ \vspace{1pt}
+    \faIcon{phone} \small 206-377-9828 $|$ 
+    \faIcon{envelope} \href{mailto:samturney24@gmail.com}
+    {\underline{samturney24@gmail.com}} $|$ 
+    \faIcon{linkedin} \href{https://linkedin.com/in/samuel-turney}
+    {\underline{linkedin.com/in/samuel-turney}} $|$
+    \faIcon{github} \href{https://github.com/sam-turney}{\underline{github.com/sam-turney}}
+\end{center}
+
+%-----------SUMMARY-----------
+% \justifying \noindent
+% Versatile Software Engineer, with two years of experience, strong programming skills, exceptional security knowledge, and an innate drive to build and support extraordinary teams. Enthusiastic about hardening software against cyber attacks and ensuring a safe and trusted customer experience.
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Threat Hunter \& Red Teamer}{Jul. 2024 -- Present}
+      {DataQuest on Contract to Rite Aid Corp.}{Remote, USA}
+      \resumeItemListStart
+        \resumeItem{Led proactive, hypothesis-driven threat hunts across 30,000+ enterprise endpoints and network environments using Rapid7 InsightIDR (SIEM) and Zeek/Bro (IDS) to uncover stealthy adversarial activity.}
+        \resumeItem{Engineered a Python-based ingestion pipeline to automatically pull over 500 new OSINT-derived IoCs weekly from threat intelligence platforms (TIPs) and feed them into Zeek sensors, increasing emerging threat coverage by 35\%.}
+        \resumeItem{Simulated advanced persistent threat (APT) activity using Kali Linux and open-source adversary emulation frameworks, mimicking real-world tactics, techniques and procedures (TTPs) to validate detection logic.}
+        \resumeItem{Authored 30+ ATT\&CK-aligned detection rules and enriched telemetry using correlated data from threat feeds, endpoint events, and network metadata, reducing false positives by 22\%.}
+        \resumeItem{Partnered with security operations center (SOC) and incident response (IR) teams on 10+ major incidents to validate findings, reduce false positives, and translate hunt results into actionable detection logic.}
+        \resumeItem{Integrated findings into ServiceNow, SIEM/SOAR playbooks, and threat models, reducing triage time by 25\%.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Security Analyst}{June 2023 -- June 2024}
+      {Western Washington University}{Bellingham, WA}
+      \resumeItemListStart
+        \resumeItem{Automated enterprise vulnerability management by integrating Nessus, Bash scripting, and Splunk Enterprise, enabling real-time ingestion and distribution of scan results and reducing manual effort by \~15 hours per week.}
+        % \resumeItem{Deployed and managed the ELK stack using Docker and Docker Compose for scalable aggregation and analysis of \~1 million logs daily across the university’s IT environment.}
+        \resumeItem{Triaged 5,000+ alerts with Microsoft Defender for Endpoint and Sentinel, resulting in zero breaches during tenure.}
+        \resumeItem{Investigated and resolved hundreds of high-risk sign-ins and anomalous authentications in Azure Active Directory, strengthening account integrity and maintaining zero counts of unauthorized access.}
+        \resumeItem{Secured 5+ Azure VMs through custom network security groups (NSGs) and identity and access management (IAM) policies, reducing unauthorized access attempts by 60\%.}
+        \resumeItem{Spearheaded a university-wide vulnerability response initiative that cut remediation time by 30\%.}
+        \resumeItem{Designed Splunk dashbaords that influenced \$25,000+ in funding toward vulnerability scanning infrastructure.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{Malware Zoo} $|$ \emph{Malware Analysis, KVM, C, Docker, C2, OpenStack}}{Sep. 2023 -- Jun. 2024}
+        \resumeItemListStart
+            \resumeItem{Designed and deployed a sandboxed malware analysis environment using Debian Linux and Kernel-Based Virtual Machine (KVM), hosted on WWU Cyber Range's OpenStack environment.}
+            \resumeItem{Reverse engineered malware samples to create safe versions in C for hands-on learning without risk of infection.}
+            \resumeItem{Built Docker-based Command and Control (C2) servers to mimic real-world attacker infrastructure and behaviors.}
+            \resumeItem{Developed interactive lessons and walkthroughs to teach malware detection, analysis, and removal techniques.}
+            \resumeItem{Integrated tools for static and dynamic malware analysis utilities (e.g., Ghidra, Wireshark, etc.) into each VM.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Secured Cloud Environment} $|$ \emph{Cloud Security, IAM, Firewall, VPC, Event Logging}}{Mar. 2024 - Jun. 2024}
+        \resumeItemListStart
+            \resumeItem{Secured a multi-account AWS environment by implementing comprehensive security controls.}
+            \resumeItem{Enforced principle of least-privilege IAM policies, reducing risk of unauthorized access by 80\%.}
+            \resumeItem{Architected VPCs with subnet segmentation, Access Control Lists (ACLs), and network security groups (NSGs).}
+            \resumeItem{Implemented 20+ firewall rules and VPC peering to control east-west and north-south traffic securely.}
+            \resumeItem{Enabled CloudTrail and AWS Config for full logging, auditing, and compliance monitoring across 100\% of services.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Western Washington University}{Bellingham, WA}
+      {Bachelor of Science in Computer Science}{June 2024}
+  \resumeSubHeadingListEnd
+
+  \vspace{1pt}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Certifications}{: CompTIA Security+, CompTIA Network+}
+    }}
+  \end{itemize}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages}{: Python, Bash, PowerShell, C, C++, C\#, Assembly (x86, x64), JavaScript, Java, SQL} \\
+        \textbf{Security}{: SIEM/SOAR, IDS/IPS, Vuln Scan/Mgmt, Atomic Red Team, IR, Reverse Engineer, Malware Analysis} \\
+        \textbf{Cloud \& Infra}{: AWS, Azure, Docker, OpenStack, KVM, Terraform, TCP/IP, DNS, VPN, Routing} \\
+        \textbf{OS}{: Linux (Debian, Ubuntu, RHEL, CentOS, Kali), Windows Server \& Workstation, macOS} \\
+        \textbf{Tools}{: Git, GitHub, Gitlab, CI/CD, Docker Compose, Kubernetes, TIPs, Regex, JSON/YAML}
+        % \textbf{Programming Languages}{: Python, Bash, PowerShell, C, C++, C\#, Assembly (x86, x64), JavaScript, Java, SQL} \\
+        % \textbf{Security Tools \& Frameworks}{: Rapid7, Splunk, Zeek, Suricata, Microsoft Defender, Microsoft Sentinel, Wireshark, Ghidra, Nessus, Nmap, Metasploit, Burp Suite, Mimikatz} \\
+        % \textbf{Cloud \& Infrastructure}{: AWS, Azure, Docker, OpenStack, KVM, VirtualBox, Terraform, Networking (TCP/IP, DNS, VPN, Routing)} \\
+        % \textbf{Operating Systems}{: Linux (Debian, Ubuntu, RHEL, CentOS, Kali), Windows Server \& Workstation, macOS} \\
+        % \textbf{Version Control \& CI/CD}{: Git, GitHub, Gitlab CI/CD, Docker Compose, Kubernetes} \\
+        % \textbf{Other}{: Threat Intelligence Platforms (TIPs), Security Information and Event Management (SIEM), Security Orchestration Automation and Response (SOAR), Vulnerability Management, Incident Response, Malware Analysis (Static/Dynamic), Reverse Engineering, Regex, JSON/YAML}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
